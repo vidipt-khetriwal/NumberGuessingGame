@@ -1,25 +1,26 @@
-const check = () =>
+let count = 3;
+
+function check() 
 {
-    let f=0;
-    for (i=0;i<3;i++)
+    let x = document.getElementById("inp").value;
+    if (parseInt(x) === 9) 
     {
-        let x=document.getElementById("inp").value
-        if (x == 6)
-        {
-            document.getElementById("res").textContent="Bravo! You guessed it right";
-            f=1;
-            break;
-        }
-        else
-        {
-            document.getElementById("res").textContent="Sorry, wrong answer. Please try again!";
-            document.getElementById("inp").value="";
-        }
-        alert(i);
+        document.getElementById("res").textContent = "Bravo! You guessed it right";
+    } 
+    else
+    {
+        document.getElementById("res").textContent =
+        "Sorry, wrong answer. Please try again!";
+        document.getElementById("inp").value = "";
+        count--;
     }
-    if (f == 0)
+
+    if (count === 0) 
     {
-        document.getElementById("res").textContent="Your 3 chances are over. The page will be reloaded now."
-        // location.reload();
+        document.getElementById("res").textContent =
+        "Your 3 chances are over. The page will be reloaded in 3 sec.";
+        setTimeout(function() {
+            location.reload();
+          }, 3000);
     }
 }
