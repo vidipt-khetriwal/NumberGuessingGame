@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(./one.png);
+    /* background-image: url(./one.png); */
     background-color: black;
-    background-position: left;
-    animation: mymove 15s infinite;
+    /* background-position: left;
+    animation: mymove 15s infinite; */
 }
-@keyframes mymove {
+/* @keyframes mymove {
     50% {background-position: right;}
-  }
+  } */
 .heading{
     text-align: center;
     padding: 1%;
